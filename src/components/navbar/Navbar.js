@@ -1,6 +1,5 @@
 import { BsTelephone } from "react-icons/bs"
 import { FaRegUserCircle } from "react-icons/fa"
-import { IoMdCart } from "react-icons/io"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
@@ -42,28 +41,12 @@ const Navbar = () => {
                         <p className="uppercase tracking-[0.8rem] text-2xl font-bold">Nilami.</p>
                     </Link>
                 </div>
-                {/* <a className="navbar-brand" href="#">Navbar</a> */}
 
                 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse lg:flex lg:justify-end" id="navbarSupportedContent">
                     <div className="navbar-nav mb-2 mb-lg-0 flex items-center">
-                        <li>
-                            <div className="flex text-2xl space-x-7 my-3 lg:mr-6">
-                                <Link to={'/profile'}>
-                                    <FaRegUserCircle className="cursor-pointer" />
-                                </Link>
-                                {/* <Link to={'/cart'}>
-                                    <IoMdCart className="cursor-pointer" />
-                                </Link> */}
-                            </div>
-                        </li>
-                        {/* <li>
-                            <div className="flex">
-                                <input type="text" placeholder="Search" className="form-control" />
-                            </div>
-                        </li> */}
                         <li className="nav-item">
                             <Link to={'/search'}>
                                 <p className="nav-link tracking-widest cursor-pointer">Search</p>
@@ -78,6 +61,13 @@ const Navbar = () => {
                             <Link to={'/login'}>
                                 <p className="nav-link tracking-widest mb-1 lg:mb-0 lg:mr-1 cursor-pointer">Login</p>
                             </Link>
+                        </li>
+                        <li>
+                            <div className="flex text-2xl space-x-7 my-3 lg:mx-6">
+                                <Link to={'/profile'}>
+                                    <FaRegUserCircle className="cursor-pointer" />
+                                </Link>
+                            </div>
                         </li>
                     </div>
                 </div>

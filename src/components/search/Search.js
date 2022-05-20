@@ -1,5 +1,4 @@
-import SearchBar from "./SearchBar";
-import SearchCard from "./SearchCard";
+import Card from "../card/Card";
 import SearchFilter from "./SearchFilter";
 
 const Search = () => {
@@ -9,7 +8,7 @@ const Search = () => {
                 <SearchFilter />
             </div>
             <div>
-                <SearchCard />
+                <Card />
             </div>
         </div>
     )

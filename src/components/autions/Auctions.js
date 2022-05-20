@@ -1,7 +1,9 @@
+import AuctionTable from "../table/Table";
+
 const Auction = () => {
     return (
-        <div>
-            Auctions
+        <div className="container-xxl my-10">
+            <AuctionTable />
         </div>
     )
 }

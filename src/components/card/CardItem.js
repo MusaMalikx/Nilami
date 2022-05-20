@@ -1,7 +1,7 @@
 import { useState } from "react"
 import cardImage from "../../assets/card.jpg"
 
-const SearchCardItem = () => {
+const CardItem = () => {
 
     const [hover, setHover] = useState(false);
 
@@ -39,4 +39,4 @@ const SearchCardItem = () => {
     )
 }
 
-export default SearchCardItem
+export default CardItem

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SearchCardItem from "../search/SearchCardItem";
+import CardItem from "../card/CardItem";
 
 const Home = () => {
 
@@ -17,7 +17,7 @@ const Home = () => {
                 {
                     cards.slice(0, 15).map((c) => (
                         <div key={c} className="mx-auto">
-                            <SearchCardItem />
+                            <CardItem />
                         </div>
                     ))
                 }

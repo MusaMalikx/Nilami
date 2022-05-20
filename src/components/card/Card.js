@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import SearchCardItem from "./SearchCardItem"
+import CardItem from "./CardItem";
 
-const SearchCard = () => {
+const Card = () => {
 
     const [cards, setCards] = useState([]);
 
@@ -34,7 +34,7 @@ const SearchCard = () => {
                 {
                     cards.slice(0, 11).map((c) => (
                         <div key={c} className="mx-auto">
-                            <SearchCardItem />
+                            <CardItem />
                         </div>
                     ))
                 }
@@ -43,4 +43,4 @@ const SearchCard = () => {
     )
 }
 
-export default SearchCard
+export default Card
