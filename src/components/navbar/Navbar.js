@@ -24,7 +24,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="">
+        <div className={` ${y > 50 && 'mt-20'}`}>
             <div className="container-fluid hidden md:flex bg-[#e9ecef] p-2 py-3 text-sm space-x-5 text-muted tracking-widest">
                 <div className=" flex items-center">
                     <BsTelephone className="me-2" />
@@ -32,7 +32,7 @@ const Navbar = () => {
                 </div>
                 <div className="border-l border-gray-500" />
                 <div>
-                    Free shipping on orders over $300
+                    Start biding and live your life with your car
                 </div>
             </div>
             <div className={`navbar navbar-expand-lg navbar-light container-fluid p-2 ${y > 50 && 'fixed-top bg-white shadow-[2px_1px_10px_4px_rgba(0,0,0,0.3)]'}`}>

@@ -1,7 +1,7 @@
 const SearchFilter = () => {
     return (
-        <div>
-            <div className="me-4 bg-white p-4 hidden lg:flex flex-col shadow-[0px_1px_5px_2px_rgba(0,0,0,0.2)] sticky inset-x-2 top-0">
+        <div className="sticky top-[100px]">
+            <div className="me-4 bg-white p-4 hidden lg:flex flex-col shadow-[0px_1px_5px_2px_rgba(0,0,0,0.2)]">
                 <div className="flex space-x-2 mb-3 items-center">
                     <p className=" whitespace-nowrap">Vehicle Type : </p>
                     <select className="form-select">

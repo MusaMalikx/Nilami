@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import CardItem from "./CardItem";
 
 const Card = () => {
@@ -13,12 +14,12 @@ const Card = () => {
 
     return (
         <div className="">
-            <div className="flex justify-between">
+            <div className="flex justify-center md:justify-between items-center flex-col md:flex-row space-y-5 md:space-y-0">
                 <div className="flex items-center">
-                    <p className="font-bold text-2xl me-3">Search results </p>
+                    <p className="font-bold text-2xl md:me-3">Search results </p>
                     <span className="text-sm">( <strong>0</strong> - <strong>10</strong> of <strong>10667</strong> )</span>
                 </div>
-                <div className="ms-5">
+                <div className="md:ms-5">
                     <select className="form-select form-select-sm">
                         <option selected value="0">Sort</option>
                         <option value="1">Year: Old to New</option>
@@ -34,7 +35,9 @@ const Card = () => {
                 {
                     cards.slice(0, 11).map((c) => (
                         <div key={c} className="mx-auto">
-                            <CardItem />
+                            <Link to={`/card/${c}`}>
+                                <CardItem />
+                            </Link>
                         </div>
                     ))
                 }

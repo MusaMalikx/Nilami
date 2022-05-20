@@ -29,7 +29,7 @@ const CardItem = () => {
             </div>
             {
                 hover &&
-                <div className="absolute z-20 top-0 h-full w-full bg-black bg-opacity-25 flex justify-center items-center">
+                <div className="absolute z-10 top-0 h-full w-full bg-black bg-opacity-25 flex justify-center items-center">
                     <div className="bg-black bg-opacity-50">
                     <button className="btn btn-outline-light py-2 font-bold uppercase tracking-[.3em] rounded-none text-[.6875rem]" data-bs-dismiss="modal" aria-label="Close">View Details</button>
                     </div>
