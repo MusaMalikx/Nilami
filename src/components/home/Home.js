@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CardItem from "../card/CardItem";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
