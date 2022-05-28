@@ -1,10 +1,17 @@
 import React from "react";
-import ChangePassword from "./ChangePassword";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../lib/firebase";
 import PersonalDetails from "./PersonalDetails";
 import UserProfile from "./UserProfile";
 
 const Profile = () => {
-  return (
+
+  const [user] = useAuthState(auth)
+  const navigate = useNavigate()
+
+  if (user)
+    return (
       <div className='container-xxl text-sm py-20'>
         <div className='text-center pb-20'>
           <h1 className="uppercase tracking-[0.8rem] py-10 text-center text-4xl lg:text-6xl whitespace-nowrap">Profile</h1>
@@ -24,14 +31,16 @@ const Profile = () => {
           </div>
           <div >
             <UserProfile
-              name={"Julie Lescaut"}
-              address={"Ostrava, Czech Republic"}
+              name={user.displayName}
+              address={user.email}
             />
           </div>
         </div>
 
       </div>
-  );
+    );
+  else
+    navigate('/login')
 }
 
 export default Profile;
