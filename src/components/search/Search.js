@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../lib/firebase";
 import Card from "../card/Card";
 import Loading from "../loading/Loading";
 import SearchFilter from "./SearchFilter";
+import List from "../card/List"
+import CardItem from "../card/CardItem";
 
 
 const Search = () => {
@@ -40,8 +42,17 @@ const Search = () => {
                     <div className={y > 50 && 'relative'}>
                         <SearchFilter />
                     </div>
-                    <div className="shadow-[0px_1px_5px_2px_rgba(0,0,0,0.2)] p-4">
-                        <Card />
+                    <div className="shadow-[0px_1px_5px_2px_rgba(0,0,0,0.2)] p-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                        {/* <Card /> */}
+                        {
+                            List.map((c, i) => (
+                                <div key={i} className="mx-auto">
+                                    <Link to={`/card/${c.id}`} state={{ card: c }}>
+                                        <CardItem card={c} />
+                                    </Link>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             )

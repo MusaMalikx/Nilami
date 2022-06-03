@@ -43,13 +43,6 @@ const Home = () => {
                     <div className="container-xxl my-10">
                         <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {
-                                // cards.slice(0, 15).map((c) => (
-                                //     <div key={c} className="mx-auto">
-                                //         <Link to={`/card/${c}`}>
-                                //             <CardItem />
-                                //         </Link>
-                                //     </div>
-                                // ))
                                 List.map((c, i) => (
                                     <div key={i} className="mx-auto">
                                         <Link to={`/card/${c.id}`} state={{ card: c }}>
