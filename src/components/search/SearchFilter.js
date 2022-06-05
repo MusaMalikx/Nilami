@@ -110,7 +110,7 @@ const SearchFilter = () => {
                     </select>
                 </div>
                 <div className="flex space-x-2 mb-3 justify-between">
-                    <p className=" whitespace-nowrap">Condition : </p>
+                    <p className=" whitespace-nowrap">Color : </p>
                     <input type="color" className="form-control w-28" />
                 </div>
                 <button className="btn btn-dark uppercase tracking-[.3em] rounded-none text-[.6875rem]" data-bs-dismiss="modal" aria-label="Close">Search</button>
